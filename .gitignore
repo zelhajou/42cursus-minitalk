@@ -3,3 +3,4 @@
 *.out
 client
 server
+*.a
