@@ -12,3 +12,10 @@ Minitalk is a data exchange program that facilitates communication between a cli
 ## Optional Features (Bonus)
 - Server acknowledgment for every received message.
 - Support for Unicode characters.
+
+## Project Structure
+- `src/` contains the source files for the client and server.
+- `include/` contains the header files.
+- `lib/` contains the libft library.
+- `bin/` is where the compiled binaries will be stored.
+
