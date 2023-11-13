@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 18:20:39 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/10/22 10:13:41 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/11/13 11:48:22 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ int	ft_atoi(const char *s)
 	{
 		n = (*s - 48) * sign;
 		if (nb > (INT_MAX / 10) || (nb == (INT_MAX / 10) && n > 7))
-			ft_error(1);
+			return (-1);
 		if (nb < (INT_MIN / 10) || (nb == (INT_MIN / 10) && n < -8))
-			ft_error(1);
+			return (-1);
 		nb = nb * 10 + n;
 		s++;
 	}
