@@ -4,3 +4,4 @@
 client
 server
 *.a
+.vscode/settings.json
