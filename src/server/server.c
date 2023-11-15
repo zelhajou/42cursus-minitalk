@@ -6,13 +6,16 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:24:10 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/11/13 10:51:50 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/11/14 13:02:33 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
 int main() {
-    // Server logic here.
+
+	// Print the server's PID
+    printf("Server PID: %d\n", getpid());
+
     return 0;
 }
