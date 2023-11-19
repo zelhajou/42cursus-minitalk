@@ -1,6 +1,6 @@
 # Compiler and compiling flags
 CC = gcc
-CFLAGS = 
+CFLAGS = -Wall -Wextra -Werror
 
 # Project name for the binaries
 NAME_CLIENT = client
