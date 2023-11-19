@@ -1,3 +1,5 @@
+![42_minitalk_banner_new](https://github.com/zelhajou/minitalk/assets/39954629/1c34bd11-ae33-43af-a67e-052fd8110d3a)
+
 # minitalk
 
 ## Overview
