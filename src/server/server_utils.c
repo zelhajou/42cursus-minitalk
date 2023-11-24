@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:24:38 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/11/20 08:41:30 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/11/24 15:30:35 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,3 @@ void	ft_handle_signal(int signum)
 		character = 0;
 	}
 }
-
