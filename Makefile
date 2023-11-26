@@ -1,5 +1,5 @@
 # Compiler and compiling flags
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 # Project name for the binaries
