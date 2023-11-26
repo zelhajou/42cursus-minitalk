@@ -21,3 +21,15 @@ Minitalk is a data exchange program that facilitates communication between a cli
 - `lib/` contains the libft library.
 - `bin/` is where the compiled binaries will be stored.
 
+## Resources
+
+### Read:
+- [My blog](https://zelhajou.medium.com/building-the-42-school-minitalk-project-a-guide-to-unix-signal-based-communication-in-c-d11605643747)
+
+
+### General
+<details>
+  <summary>
+- 
+  </summary>
+</details>
