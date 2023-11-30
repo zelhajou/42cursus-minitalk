@@ -15,6 +15,22 @@ Minitalk is a data exchange program that facilitates communication between a cli
 - Server acknowledgment for every received message.
 - Support for Unicode characters.
 
+## Allowed Functions
+- write
+- ft_printf and any equivalent YOU coded
+- signal
+- sigemptyset
+- sigaddset
+- sigaction
+- kill
+- getpid
+- malloc
+- free
+- pause
+- sleep
+- usleep
+- exit
+
 ## Project Structure
 - `src/` contains the source files for the client and server.
 - `include/` contains the header files.
