@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:23:29 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/11/24 15:30:31 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/11/30 12:45:09 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	ft_send_char(int pid, unsigned char c)
 	while (i >= 0)
 	{
 		ft_send_bit(pid, (c >> i) & 1);
-		usleep(100);
+		usleep(300);
 		i--;
 	}
 }
