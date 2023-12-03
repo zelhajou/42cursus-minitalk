@@ -16,20 +16,20 @@ Minitalk is a data exchange program that facilitates communication between a cli
 - Support for Unicode characters.
 
 ## Allowed Functions
-- write
-- ft_printf and any equivalent YOU coded
-- signal
-- sigemptyset
-- sigaddset
-- sigaction
-- kill
-- getpid
-- malloc
-- free
-- pause
-- sleep
-- usleep
-- exit
+- [write](https://man7.org/linux/man-pages/man2/write.2.html)
+- [ft_printf](https://github.com/zelhajou/ft_printf)
+- [signal](https://man7.org/linux/man-pages/man2/signal.2.html)
+- [sigemptyset](https://man7.org/linux/man-pages/man3/sigemptyset.3p.html)
+- [sigaddset](https://man7.org/linux/man-pages/man3/sigaddset.3p.html)
+- [sigaction](https://man7.org/linux/man-pages/man2/sigaction.2.html)
+- [kill](https://man7.org/linux/man-pages/man2/kill.2.html)
+- [getpid](https://man7.org/linux/man-pages/man2/getpid.2.html)
+- [malloc](https://man7.org/linux/man-pages/man3/malloc.3.html)
+- [free](https://man7.org/linux/man-pages/man1/free.1.html)
+- [pause](https://man7.org/linux/man-pages/man2/pause.2.html)
+- [sleep](https://man7.org/linux/man-pages/man3/sleep.3.html)
+- [usleep](https://man7.org/linux/man-pages/man3/usleep.3.html)
+- [exit](https://man7.org/linux/man-pages/man3/exit.3.html)
 
 ## Project Structure
 - `src/` contains the source files for the client and server.
@@ -42,10 +42,9 @@ Minitalk is a data exchange program that facilitates communication between a cli
 ### Read:
 - [My blog](https://zelhajou.medium.com/building-the-42-school-minitalk-project-a-guide-to-unix-signal-based-communication-in-c-d11605643747)
 
-
 ### General
 <details>
   <summary>
-- 
+ppp
   </summary>
 </details>
