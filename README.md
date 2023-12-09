@@ -47,13 +47,6 @@ Minitalk is a data exchange program that facilitates communication between a cli
   <summary>
 Q: How are signals used in C?
   </summary>
-  A: Signals are used for various purposes in C programming, such as handling unexpected events, communication between processes, and managing the execution flow. They provide a way for a process to respond to events asynchronously
-</details>
-
-<details>
-  <summary>
-Q: How are signals used in C?
-  </summary>
 A: Signals are used for various purposes in C programming, such as handling unexpected events, communication between processes, and managing the execution flow. They provide a way for a process to respond to events asynchronously.
 </details>
 
@@ -125,7 +118,7 @@ The <code>sigaction</code> function is more flexible and recommended for advance
 
 <details>
   <summary>
-Q: What is sigaction in C?
+Q: What is <code>sigaction</code> in C?
   </summary>
 A: <code>sigaction</code> is a function in C that provides a more flexible and detailed way to handle <code>signals</code> compared to the <code>signal</code>code> function. It allows for fine-grained control over signal handling and provides additional information through the use of a structure called <code>struct sigaction</code>.
 </details>
@@ -135,7 +128,7 @@ A: <code>sigaction</code> is a function in C that provides a more flexible and d
 Q: How is <code>sigaction</code> different from <code>signal</code> in C?
   </summary>
 A: While both sigaction and signal are used for signal handling, sigaction offers more control and information. signal is a simpler interface that allows you to set a function as a signal handler, whereas sigaction allows you to specify additional flags, handle multiple signals with a single handler, and obtain detailed information about the signal and its handling.
-<details>
+</details>
 
 <details>
   <summary>
@@ -143,7 +136,8 @@ Q: What information does <code>struct sigaction</code>e provide?
   </summary>
 A: <code>struct sigaction</code> includes several fields, but the <code>sa_handler</code> field is the most commonly used. It represents the signal handler function. Additionally, there's the <code>sa_flags</code> field that allows you to set various flags for handling signals, and the <code>sa_mask</code> field that specifies a set of signals to be blocked while the signal handler is executing.
 
-<details>
+</details>
+
 
 <details>
   <summary>
