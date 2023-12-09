@@ -135,9 +135,7 @@ A: While both sigaction and signal are used for signal handling, sigaction offer
 Q: What information does <code>struct sigaction</code>e provide?
   </summary>
 A: <code>struct sigaction</code> includes several fields, but the <code>sa_handler</code> field is the most commonly used. It represents the signal handler function. Additionally, there's the <code>sa_flags</code> field that allows you to set various flags for handling signals, and the <code>sa_mask</code> field that specifies a set of signals to be blocked while the signal handler is executing.
-
 </details>
-
 
 <details>
   <summary>
