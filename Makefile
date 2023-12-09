@@ -15,7 +15,7 @@ INC_DIR = include
 
 # Source files and object files
 SRC_CLIENT = $(SRC_DIR)/client/client.c $(SRC_DIR)/client/client_utils.c
-SRC_SERVER = $(SRC_DIR)/server/server.c $(SRC_DIR)/server/server_utils.c
+SRC_SERVER = $(SRC_DIR)/server/server.c
 OBJ_CLIENT = $(SRC_CLIENT:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 OBJ_SERVER = $(SRC_SERVER:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 

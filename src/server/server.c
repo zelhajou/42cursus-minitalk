@@ -6,11 +6,13 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:24:10 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/11/20 08:41:23 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/09 11:00:17 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
+
+int	g_received_char = 0;
 
 int	main(void)
 {
@@ -22,6 +24,30 @@ int	main(void)
 	sigaction(SIGUSR1, &sa, NULL);
 	sigaction(SIGUSR2, &sa, NULL);
 	while (1)
-		pause();
+	{
+		if (g_received_char)
+		{
+			write(1, &g_received_char, 1);
+			g_received_char = 0;
+		}
+		usleep(1000);
+	}
 	return (0);
+}
+
+void	ft_handle_signal(int signum)
+{
+	static unsigned char	character = 0;
+	static int				bit_count = 0;
+
+	character = character << 1;
+	if (signum == SIGUSR1)
+		character = character | 1;
+	bit_count++;
+	if (bit_count == 8)
+	{
+		write(1, &character, 1);
+		bit_count = 0;
+		character = 0;
+	}
 }
