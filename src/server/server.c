@@ -6,13 +6,11 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:24:10 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/09 11:00:17 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/09 11:03:27 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
-
-int	g_received_char = 0;
 
 int	main(void)
 {
@@ -24,14 +22,7 @@ int	main(void)
 	sigaction(SIGUSR1, &sa, NULL);
 	sigaction(SIGUSR2, &sa, NULL);
 	while (1)
-	{
-		if (g_received_char)
-		{
-			write(1, &g_received_char, 1);
-			g_received_char = 0;
-		}
-		usleep(1000);
-	}
+		pause();
 	return (0);
 }
 
