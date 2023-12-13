@@ -6,16 +6,21 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:24:10 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/11 10:27:42 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/13 23:20:57 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-void	ft_handle_signal(int signum)
+pid_t client_pid = 0;
+
+void	ft_handle_signal(int signum, siginfo_t *info, void *context)
 {
 	static unsigned char	character = 0;
 	static int				bit_count = 0;
+
+	(void)context;
+	client_pid = info->si_pid;
 
 	character = character << 1;
 	if (signum == SIGUSR1)
@@ -27,6 +32,7 @@ void	ft_handle_signal(int signum)
 		bit_count = 0;
 		character = 0;
 	}
+	kill(client_pid, SIGUSR2);
 }
 
 int	main(void)
@@ -34,8 +40,8 @@ int	main(void)
 	struct sigaction	sa;
 
 	ft_printf("Server PID: %d\n", getpid());
-	sa.sa_handler = &ft_handle_signal;
-	sa.sa_flags = SA_RESTART;
+	sa.sa_sigaction = &ft_handle_signal;
+	sa.sa_flags = SA_SIGINFO;
 	sigaction(SIGUSR1, &sa, NULL);
 	sigaction(SIGUSR2, &sa, NULL);
 	while (1)
