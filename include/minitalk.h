@@ -6,7 +6,7 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 18:07:48 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/14 17:40:12 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/14 17:51:24 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 void	ft_send_bit(int pid, int bit);
 void	ft_send_char(int pid, unsigned char c);
 void	ft_send_string(int pid, const char *str);
-void	ft_resp_handler(int signum)
+void	ft_resp_handler(int signum);
 
 // Server
 void	ft_handle_signal(int signum, siginfo_t *info, void *context);
