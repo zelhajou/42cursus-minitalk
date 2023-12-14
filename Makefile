@@ -36,7 +36,7 @@ $(NAME_CLIENT): $(LIBFT) $(FT_PRINTF) $(OBJ_CLIENT)
 $(NAME_SERVER): $(LIBFT) $(FT_PRINTF) $(OBJ_SERVER)
 	$(CC) $(CFLAGS) $(OBJ_SERVER) $(HEADERS) $(LIBS) -o $(NAME_SERVER)
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(INC_DIR)/minitalk.h
 	@mkdir -p $(@D)
 	$(CC) $(CFLAGS) $(HEADERS) -c $< -o $@
 
