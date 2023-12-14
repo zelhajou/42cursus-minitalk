@@ -6,14 +6,17 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:23:19 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/14 14:51:20 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/14 15:58:10 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
+int	g_confirm_flag = 0;
+
 void	ft_resp_handler(int signum)
 {
+	g_confirm_flag = 1;
 	(void)signum;
 }
 
@@ -30,7 +33,9 @@ void	ft_send_bit(int pid, int bit)
 		ft_putstr_fd("Error", 2);
 		exit(EXIT_FAILURE);
 	}
-	pause();
+	while (!g_confirm_flag)
+		;
+	g_confirm_flag = 0;
 }
 
 void	ft_send_char(int pid, unsigned char c)
