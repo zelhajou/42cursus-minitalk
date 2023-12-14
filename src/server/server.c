@@ -6,22 +6,25 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:24:10 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/14 00:00:12 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/14 14:50:46 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-pid_t client_pid = 0;
-
 void	ft_handle_signal(int signum, siginfo_t *info, void *context)
 {
 	static unsigned char	character = 0;
 	static int				bit_count = 0;
+	static pid_t			client_pid = 0;
 
 	(void)context;
+	if (client_pid != info->si_pid)
+	{
+		bit_count = 0;
+		character = 0;
+	}
 	client_pid = info->si_pid;
-
 	character = character << 1;
 	if (signum == SIGUSR1)
 		character = character | 1;
@@ -32,6 +35,7 @@ void	ft_handle_signal(int signum, siginfo_t *info, void *context)
 		bit_count = 0;
 		character = 0;
 	}
+	usleep(400);
 	kill(client_pid, SIGUSR2);
 }
 
@@ -45,6 +49,6 @@ int	main(void)
 	sigaction(SIGUSR1, &sa, NULL);
 	sigaction(SIGUSR2, &sa, NULL);
 	while (1)
-		pause();
+		;
 	return (0);
 }

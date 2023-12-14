@@ -6,18 +6,15 @@
 /*   By: zelhajou <zelhajou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 17:23:19 by zelhajou          #+#    #+#             */
-/*   Updated: 2023/12/14 00:12:02 by zelhajou         ###   ########.fr       */
+/*   Updated: 2023/12/14 14:51:20 by zelhajou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-int	confirm_flag = 0;
-
 void	ft_resp_handler(int signum)
 {
 	(void)signum;
-	confirm_flag = 1;
 }
 
 void	ft_send_bit(int pid, int bit)
@@ -33,10 +30,7 @@ void	ft_send_bit(int pid, int bit)
 		ft_putstr_fd("Error", 2);
 		exit(EXIT_FAILURE);
 	}
-
-	while (!confirm_flag)
-		pause();
-	confirm_flag = 0;
+	pause();
 }
 
 void	ft_send_char(int pid, unsigned char c)
@@ -47,7 +41,7 @@ void	ft_send_char(int pid, unsigned char c)
 	while (i >= 0)
 	{
 		ft_send_bit(pid, (c >> i) & 1);
-		usleep(10000);
+		usleep(400);
 		i--;
 	}
 }
@@ -74,9 +68,7 @@ int	main(int argc, char **argv)
 		ft_putstr_fd("Invalid PID\n", 2);
 		exit(EXIT_FAILURE);
 	}
-
-    signal(SIGUSR2, ft_resp_handler);
-
+	signal(SIGUSR2, ft_resp_handler);
 	ft_send_string(pid, argv[2]);
 	return (0);
 }
