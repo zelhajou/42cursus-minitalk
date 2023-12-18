@@ -38,6 +38,22 @@ Minitalk is a data exchange program that facilitates communication between a cli
 
 ## Resources
 
+| Resource                                                                                                                                           | Source    |
+| :------------------------------------------------------------------------------------------------------------------------------------------------- | :-------- |
+| [Bitwise Operators in C/C++](https://www.geeksforgeeks.org/bitwise-operators-in-c-cpp)                                                             | `Website` |
+| [How to use signal handlers in C language?](https://linuxhint.com/signal_handlers_c_programming_language)                                          | `Website` |
+| [include/linux/signal.h - Linux source code (v6.6.2)](https://elixir.bootlin.com/linux/latest/source/include/linux/signal.h)                       | `Website` |
+| [Beej's Guide to C Programming - 29 Signal Handling](https://beej.us/guide/bgc/html/split/signal-handling.html)                                    | `Website` |
+| [Beej's Guide to C Programming - Bit-Fields](https://beej.us/guide/bgc/html/split/structs-ii-more-fun-with-structs.html#bit-fields)                | `Website` |
+| [Beej's Guide to C Programming - What is Unicode?](https://beej.us/guide/bgc/html/split/unicode-wide-characters-and-all-that.html#what-is-unicode) | `Website` |
+| [42-Bitwise_Operators](https://github.com/agavrel/42-Bitwise_Operators)                                                                            | `GitHub`  |
+
+| Video Resource                                                                                             | Source    | User |
+| :--------------------------------------------------------------------------------------------------------- | :-------- | :--- |
+| [Sending and Handling Signals in C (kill, signal, sigaction)](https://www.youtube.com/watch?v=83M5-NPDeWs) | `Youtube` | `Jacob Sorber` |
+| [Short Introduction to Signals in C](https://youtu.be/5We_HtLlAbs)                                         | `Youtube` | `CodeVault` |
+| [Handling Signals](https://www.youtube.com/watch?v=jF-1eFhyz1U)                                            | `Youtube` | `CodeVault` |
+
 ### Read:
 - [My blog](https://zelhajou.medium.com/building-the-42-school-minitalk-project-a-guide-to-unix-signal-based-communication-in-c-d11605643747)
 
@@ -202,3 +218,5 @@ int main() {
 }
 ```
 </details>
+
+
