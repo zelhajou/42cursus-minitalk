@@ -1,5 +1,5 @@
 
-![ascii-text-art (2)](https://github.com/zelhajou/minitalk/assets/39954629/70bebd06-ff90-4d38-8e61-61f763910b48)
+![ascii-text-art (1)](https://github.com/zelhajou/minitalk/assets/39954629/9d0388e6-444a-402f-b307-a0690dc25f40)
 
 ## Overview
 Minitalk is a data exchange program that facilitates communication between a client and a server using UNIX signals. The main objective is to send a string from the client to the server using only the SIGUSR1 and SIGUSR2 signals.
