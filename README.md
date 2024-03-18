@@ -59,6 +59,15 @@ Minitalk is a data exchange program that facilitates communication between a cli
 - [My blog](https://zelhajou.medium.com/building-the-42-school-minitalk-project-a-guide-to-unix-signal-based-communication-in-c-d11605643747)
 
 ### General
+
+### Character Encodings
+Character encodings are a way of representing characters as numbers. They are used to store and transmit text. The most common character encoding is ASCII, which is a 7-bit encoding. This means that each character is represented by a number between 0 and 127. The ASCII character set contains 128 characters, including letters, numbers, punctuation, and control characters. The ASCII character set is a subset of the Unicode character set, which is a 16-bit encoding. Unicode is a superset of ASCII, so ASCII characters can be represented by Unicode. Unicode is the most common character encoding used on the web.
+
+| Video Resource                                                                                             | Source    |
+| :--------------------------------------------------------------------------------------------------------- | :-------- |
+| [Must Know about Character Encodings](https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/) | `Website` |
+| [Character Encoding](https://cs.lmu.edu/~ray/notes/charenc/)                                         | `Website` |
+
 <details>
   <summary>
 Q: How are signals used in C?
