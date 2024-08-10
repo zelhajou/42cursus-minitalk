@@ -78,6 +78,10 @@ ASCII is a character encoding standard for electronic communication. It was deve
 ![character-encodings](https://github.com/zelhajou/42-minitalk/assets/39954629/6587364d-871b-4664-acdf-949501e97a6f)
 
 #### Signals
+
+![signals](https://github.com/user-attachments/assets/0bcc29d8-655b-4c43-83e0-d50c94ee0d88)
+
+
 <details>
   <summary>
 Q: How are signals used in C?
