@@ -60,6 +60,11 @@ Minitalk is a data exchange program that facilitates communication between a cli
 
 ### General
 
+#### Processes
+
+![processes (1)](https://github.com/user-attachments/assets/b50090d7-4aac-42f4-8ccb-5673cf0b8edb)
+
+
 #### Inter-Process Communication
 
 ![ipc](https://github.com/user-attachments/assets/918da100-acf5-47a1-a21f-a8a053483543)
